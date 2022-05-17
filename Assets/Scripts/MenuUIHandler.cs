@@ -42,5 +42,12 @@ public class MenuUIHandler : MonoBehaviour
         Application.Quit(); // original code to quit Unity player
 #endif
     }
-       
+
+    public void NewScore(int score)
+    {
+        // Função que faz a variavel "Score" do SubmitScore receber o novo score.
+
+        SubmitScore.Instance.Score = score;
+    }
+
 }

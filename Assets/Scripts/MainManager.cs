@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.IO;
+
 
 public class MainManager : MonoBehaviour
 {
@@ -12,7 +12,8 @@ public class MainManager : MonoBehaviour
     public Rigidbody Ball;
 
     public Text ScoreText;
-    public GameObject GameOverText;
+    public GameObject GameOverScreen;
+    public GameObject RegisterScore;
 
     private bool m_Started = false;
     private int m_Points;
@@ -23,6 +24,7 @@ public class MainManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //GameOverText.SetActive(false);
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
@@ -79,6 +81,10 @@ public class MainManager : MonoBehaviour
     public void GameOver()
     {
         m_GameOver = true;
-        GameOverText.SetActive(true);
+        GameOverScreen.SetActive(true);
+        if (m_Points > 0)
+        {
+            RegisterScore.SetActive(true);
+        }
     }
 }
