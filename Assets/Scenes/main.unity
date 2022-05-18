@@ -809,6 +809,7 @@ MonoBehaviour:
   LineCount: 6
   Ball: {fileID: 177912862}
   ScoreText: {fileID: 188020406}
+  TopScoreText: {fileID: 2078529056}
   GameOverScreen: {fileID: 1762333145}
   RegisterScore: {fileID: 7955438}
   m_GameOver: 0
@@ -1158,7 +1159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 796869601}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 450625942}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+        m_MethodName: SaveScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &796869601
 MonoBehaviour:
   m_ObjectHideFlags: 0

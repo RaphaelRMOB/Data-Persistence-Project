@@ -22,6 +22,8 @@ public class SubmitScore : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        LoadScore();
     }
 
     [System.Serializable]

@@ -12,8 +12,11 @@ public class MainManager : MonoBehaviour
     public Rigidbody Ball;
 
     public Text ScoreText;
+    public Text TopScoreText;
     public GameObject GameOverScreen;
     public GameObject RegisterScore;
+    //public MenuUIHandler Menu;
+
 
     private bool m_Started = false;
     private int m_Points;
@@ -84,7 +87,22 @@ public class MainManager : MonoBehaviour
         GameOverScreen.SetActive(true);
         if (m_Points > 0)
         {
+            TopScoreText.text = $"Score : {m_Points}";
+            
             RegisterScore.SetActive(true);
         }
     }
+
+    public void SaveScore()
+    {
+        /*
+        Menu = FindObjectOfType<MenuUIHandler>();
+        Menu.HighScores();
+        */
+        
+        SceneManager.LoadScene(2);
+        Debug.Log("Top 5");
+        
+    }
+
 }

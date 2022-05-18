@@ -11,6 +11,13 @@ using UnityEditor;
 [DefaultExecutionOrder(1000)]
 public class MenuUIHandler : MonoBehaviour
 {
+    public void NewScore(int score)
+    {
+        // Função que faz a variavel "Score" do SubmitScore receber o novo score.
+
+        SubmitScore.Instance.Score = score;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +50,6 @@ public class MenuUIHandler : MonoBehaviour
 #endif
     }
 
-    public void NewScore(int score)
-    {
-        // Função que faz a variavel "Score" do SubmitScore receber o novo score.
-
-        SubmitScore.Instance.Score = score;
-    }
+    
 
 }
